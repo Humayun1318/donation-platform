@@ -14,3 +14,58 @@ document.getElementById('history-btn').addEventListener('click', function () {
   document.getElementById('history-btn').style.background = '#B4F461'
 })
 
+//for Noakhali donation
+document.getElementById('donate-btn-1').addEventListener('click', function () {
+  const havingMainBalance = getInnerText('main-balance');
+  const totalCollection = getInnerText('total-collection');
+  const amountForDonate = getInputFieldTextById('first-input-field');
+  const actualAmount = parseFloat(amountForDonate)
+
+  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount < 0
+    || amountForDonate.trim() !== actualAmount.toString().trim()) {
+    alert('Please give me valid number')
+    return;
+  }
+  const collectedAmount = totalCollection + actualAmount;
+  const afterDonateMainBalance = havingMainBalance - actualAmount;
+  document.getElementById('main-balance').innerText = afterDonateMainBalance;
+  document.getElementById('total-collection').innerText = collectedAmount;
+  document.getElementById('my_modal_5').showModal();
+});
+
+//for feni donation
+document.getElementById('donate-btn-2').addEventListener('click', function () {
+  const havingMainBalance = getInnerText('main-balance');
+  const totalCollection = getInnerText('total-collection-of-feni');
+  const amountForDonate = getInputFieldTextById('second-input-field');
+  const actualAmount = parseFloat(amountForDonate)
+
+  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount < 0
+    || amountForDonate.trim() !== actualAmount.toString().trim()) {
+    alert('Please give me valid number')
+    return;
+  }
+  const collectedAmount = totalCollection + actualAmount;
+  const afterDonateMainBalance = havingMainBalance - actualAmount;
+  document.getElementById('main-balance').innerText = afterDonateMainBalance;
+  document.getElementById('total-collection-of-feni').innerText = collectedAmount;
+  document.getElementById('my_modal_5').showModal();
+});
+//for Quota Movement donation
+document.getElementById('donate-btn-3').addEventListener('click', function () {
+  const havingMainBalance = getInnerText('main-balance');
+  const totalCollection = getInnerText('total-collection-of-quota');
+  const amountForDonate = getInputFieldTextById('third-input-field');
+  const actualAmount = parseFloat(amountForDonate)
+
+  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount < 0
+    || amountForDonate.trim() !== actualAmount.toString().trim()) {
+    alert('Please give me valid number')
+    return;
+  }
+  const collectedAmount = totalCollection + actualAmount;
+  const afterDonateMainBalance = havingMainBalance - actualAmount;
+  document.getElementById('main-balance').innerText = afterDonateMainBalance;
+  document.getElementById('total-collection-of-quota').innerText = collectedAmount;
+  document.getElementById('my_modal_5').showModal();
+});

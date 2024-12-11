@@ -9,3 +9,15 @@ function toggle(id) {
   //remove specific one
   document.getElementById(id).classList.remove('hidden');
 }
+
+//Get the input field text
+function getInputFieldTextById(id) {
+  const inputField = document.getElementById(id).value;
+  document.getElementById(id).value = "";
+  return inputField;
+}
+
+//Get the inner text
+function getInnerText(id) {
+  return parseFloat(document.getElementById(id).innerText);
+}
