@@ -30,7 +30,10 @@ document.getElementById('donate-btn-1').addEventListener('click', function () {
   const afterDonateMainBalance = havingMainBalance - actualAmount;
   document.getElementById('main-balance').innerText = afterDonateMainBalance;
   document.getElementById('total-collection').innerText = collectedAmount;
+  //show modal 
   document.getElementById('my_modal_5').showModal();
+  //Transaction history
+  addedTransactionHistory(actualAmount, 'for-Noakhali')
 });
 
 //for feni donation
@@ -49,8 +52,12 @@ document.getElementById('donate-btn-2').addEventListener('click', function () {
   const afterDonateMainBalance = havingMainBalance - actualAmount;
   document.getElementById('main-balance').innerText = afterDonateMainBalance;
   document.getElementById('total-collection-of-feni').innerText = collectedAmount;
+  //show modal
   document.getElementById('my_modal_5').showModal();
+  //Transaction history
+  addedTransactionHistory(actualAmount, 'for-feni')
 });
+
 //for Quota Movement donation
 document.getElementById('donate-btn-3').addEventListener('click', function () {
   const havingMainBalance = getInnerText('main-balance');
@@ -67,5 +74,8 @@ document.getElementById('donate-btn-3').addEventListener('click', function () {
   const afterDonateMainBalance = havingMainBalance - actualAmount;
   document.getElementById('main-balance').innerText = afterDonateMainBalance;
   document.getElementById('total-collection-of-quota').innerText = collectedAmount;
+  //show modal
   document.getElementById('my_modal_5').showModal();
+  //Transaction history
+  addedTransactionHistory(actualAmount, 'for-quota')
 });
