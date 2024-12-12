@@ -1,3 +1,8 @@
+//blog page navigation
+function navigateBlogPage() {
+  location.href = 'blog.html';
+}
+
 //By default Donate button clicked 
 document.getElementById('donate-btn').style.background = '#B4F461';
 document.getElementById('history-container').classList.add('hidden');

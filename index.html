@@ -23,12 +23,14 @@
 
 <body class="lexend-fontFamily">
   <!-- Heading started here -->
-  <header class="bg-[#F9F7F3] pb-10 px-4 pt-4 mb-20 sticky top-0">
+  <header class="pb-10 mb-20 sticky top-0 glass">
     <!-- navbar -->
     <section class="grid grid-cols-2 gap-4 items-center sm:flex  sm:items-center sm:justify-around 
-            py-6">
+            py-6 bg-[#F9F7F3] px-4 sm:px-0">
       <div class="">
-        <button class="rounded-btn py-3 px-8 bg-[#B4F461] text-xl font-semibold hover:bg-[#b5f490b0]">Blog</button>
+        <button class="rounded-btn py-3 px-8 bg-[#B4F461] text-xl font-semibold hover:bg-[#b5f490b0]" id="blog"
+          onclick="navigateBlogPage()">
+          Blog</button>
       </div>
       <div class="col-span-full order-first sm:-order-none">
         <div class="flex items-center gap-4">
@@ -45,21 +47,21 @@
         </div>
       </div>
     </section>
+    <!-- toggle button -->
+    <div class="text-center mt-4 pt-4">
+      <!-- Donation -->
+      <button id="donate-btn"
+        class="border border-[#1111114D] rounded-btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mr-2 text-lg font-medium btn">
+        Donation</button>
+      <!-- History -->
+      <button id="history-btn" class="border border-[#1111114D] rounded-btn btn-xs sm:btn-sm md:btn-md lg:btn-lg
+            text-lg font-medium btn">
+        History</button>
+    </div>
   </header>
   <!-- Heading end here -->
 
   <main class="w-4/5 mx-auto">
-    <!-- toggle button -->
-    <div class="text-center mb-8">
-      <!-- Donation -->
-      <button id="donate-btn"
-        class="border border-[#1111114D] rounded-btn btn-xs sm:btn-sm md:btn-md lg:btn-lg mr-2 text-lg font-medium">
-        Donation</button>
-      <!-- History -->
-      <button id="history-btn" class="border border-[#1111114D] rounded-btn btn-xs sm:btn-sm md:btn-md lg:btn-lg
-        text-lg font-medium">
-        History</button>
-    </div>
     <!-- This is main Donation content here -->
     <section id="donate-container" class="">
       <!-- 1st card -->
@@ -67,7 +69,7 @@
         <div class="sm:w-[50%]">
           <img src="assets/noakhali.png" alt="Noakhali jhela picture" class="w-full h-full object-cover">
         </div>
-        <div class="space-y-4 sm:w-[50%] flex flex-col justify-between">
+        <div class="space-y-4 sm:w-[50%] flex flex-col justify-between mt-4 sm:mt-0">
           <p class="py-3 px-4 flex items-center rounded-lg gap-2 bg-[#1111110D] max-w-fit">
             <img src="assets/coin.png" alt="">
             <span id="total-collection">00</span>BDT
@@ -93,7 +95,7 @@
         <div class="sm:w-[50%]">
           <img src="assets/feni.png" alt="Feni jhela picture" class="w-full h-full object-cover">
         </div>
-        <div class="space-y-4 sm:w-[50%] flex flex-col justify-between">
+        <div class="space-y-4 sm:w-[50%] flex flex-col justify-between mt-4 sm:mt-0">
           <p class="py-3 px-4 flex items-center rounded-lg gap-2 bg-[#1111110D] max-w-fit">
             <img src="assets/coin.png" alt="">
             <span id="total-collection-of-feni">00</span>BDT
@@ -119,7 +121,7 @@
         <div class="sm:w-[50%]">
           <img src="assets/quota-protest.png" alt="" class="w-full h-full object-cover">
         </div>
-        <div class="space-y-4 sm:w-[50%] flex flex-col justify-between">
+        <div class="space-y-4 sm:w-[50%] flex flex-col justify-between mt-4 sm:mt-0">
           <p class="py-3 px-4 flex items-center rounded-lg gap-2 bg-[#1111110D] max-w-fit">
             <img src="assets/coin.png" alt="">
             <span id="total-collection-of-quota">00</span>BDT
@@ -145,19 +147,19 @@
     </section>
 
     <!-- showing Modal -->
-      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center ">
-        <div class="modal-box space-y-3">
-          <h3 class="text-2xl font-bold text-center ">Congrats!!!</h3>
-          <p class="flex justify-center"><img src="assets/coin.png" alt=""></p>
-          <p class="py-4">You Have Donated For Humankind....!❤️🫂</p>
-          <p class="text-lg font-bold">Successfully</p>
-          <div class="modal-action flex justify-center">
-            <form method="dialog">
-              <button class="btn mt-2">Close Confirmation</button>
-            </form>
-          </div>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle text-center ">
+      <div class="modal-box space-y-3">
+        <h3 class="text-2xl font-bold text-center ">Congrats!!!</h3>
+        <p class="flex justify-center"><img src="assets/coin.png" alt=""></p>
+        <p class="py-4">You Have Donated For Humankind....!❤️🫂</p>
+        <p class="text-lg font-bold">Successfully</p>
+        <div class="modal-action flex justify-center">
+          <form method="dialog">
+            <button class="btn mt-2">Close Confirmation</button>
+          </form>
         </div>
-      </dialog>
+      </div>
+    </dialog>
 
     <!-- This is History -->
     <section id="history-container" class="space-y-6">

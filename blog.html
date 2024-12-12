@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+  <!-- This is daisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google fonts Lexend -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+    .lexend-fontFamily {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+</head>
+
+<body class="lexend-fontFamily">
+  <header class="pb-10 mb-20 sticky top-0 glass">
+    <section class="grid grid-cols-2 gap-4 items-center sm:flex  sm:items-center sm:justify-around 
+                py-6 bg-[#F9F7F3] px-4 sm:px-0">
+      <div class="">
+        <a class="rounded-btn py-3 px-8 bg-[#B4F461] text-xl font-semibold hover:bg-[#b5f490b0]" id="home"
+          href="index.html">
+          Home</a>
+      </div>
+      <div class="col-span-full order-first sm:-order-none">
+        <div class="flex items-center gap-4">
+          <img src="assets/logo.png" alt="This is a logo image">
+          <p class="text-xl font-semibold">Donate Bangladesh</p>
+        </div>
+      </div>
+      <div class="">
+        <div class="flex items-center gap-3">
+          <img src="assets/coin.png" alt="This is a coin icon">
+          <p class="text-xl font-medium text-[#111111B3]">
+            <span id="main-balance">5500</span> BDT
+          </p>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="w-4/5 mx-auto">
+      <!-- accordion heading -->
+      <div class="flex items-end gap-1">
+        <h1 class="sm:text-4xl font-bold mb-2">Important FAQ</h1>
+        <img src="assets/question.gif" alt="" width="60" class="">
+      </div>
+      <!-- accordion content -->
+      <div class="space-y-1">
+        <div class="collapse collapse-arrow border">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+          <div class="collapse-content">
+            <p>DOM means Document Object Model. Which is basically used on the Web for documents. Like HTML content used
+              as a tree
+              structure, every node of the tree represents a part of a document such as an element, attributes, or text.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow border">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+          <div class="collapse-content">
+            <ul class="list-disc">
+              We can use several ways to select the HTML elements using DOM. Here’s the few most common methods to
+              select the HTML
+              elements.
+              <li>getElementById(): This method is used for the ID. We can select any html elements by using a unique
+                ID.</li>
+              <li>getElementsByClassName(): This method is used for class names. When we use this method by using a
+                class name it gives us
+                a return array-like object of all elements</li>
+              <li>getElementsByTagName(): This method is used for html tag names. We can select from the HTML document
+                by using their tag
+                names. And it also gives us the full content of that tag like-array object.</li>
+              <li>querySelector(): This method is used for CSS selector. We select any elements like a CSS selector.
+              </li>
+              <li>querySelectorAll(): This is also used for CSS selectors but it gives us a nodelist containing all
+                elements of this
+                selector</li>
+            </ul>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow border">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is
+            it useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation is javascript technique where a event listener added to the parent node for handling it's child event. When we need to add event listener of a list of child node that time we need the event delegation for handling that. Basically it's possible for event bubbling. instead of adding to each child node event its more beneficial to add their parent node event.
+
+              Also its very useful when that type of task we have to done where each node adding event listener.For avoiding this thing we need that. Using event delegation we targeted also trigger node using event.target which also provide us javascript.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow border">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using
+            the DOM?</div>
+          <div class="collapse-content">
+            <p>
+              For manipulating attributes we can use methods like getAttribute(), setAttribute(), and removeAttribute() to access, modify, or delete an element's.
+              For styles using the DOM, we use the style property to directly modify individual CSS properties (like, style.color, style.backgroundColor) etc.
+              Also we use classList methods (add(), remove()) to apply or remove pre-defined CSS classes for styling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
