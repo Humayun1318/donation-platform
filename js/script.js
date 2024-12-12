@@ -26,9 +26,9 @@ document.getElementById('donate-btn-1').addEventListener('click', function () {
   const amountForDonate = getInputFieldTextById('first-input-field');
   const actualAmount = parseFloat(amountForDonate)
 
-  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount < 0
+  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount <= 0
     || amountForDonate.trim() !== actualAmount.toString().trim()) {
-    alert('Please give me valid number')
+    alert('Please give me the valid amount you want to donate')
     return;
   }
   const collectedAmount = totalCollection + actualAmount;
@@ -48,9 +48,9 @@ document.getElementById('donate-btn-2').addEventListener('click', function () {
   const amountForDonate = getInputFieldTextById('second-input-field');
   const actualAmount = parseFloat(amountForDonate)
 
-  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount < 0
+  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount <= 0
     || amountForDonate.trim() !== actualAmount.toString().trim()) {
-    alert('Please give me valid number')
+    alert('Please give me the valid amount you want to donate')
     return;
   }
   const collectedAmount = totalCollection + actualAmount;
@@ -70,9 +70,9 @@ document.getElementById('donate-btn-3').addEventListener('click', function () {
   const amountForDonate = getInputFieldTextById('third-input-field');
   const actualAmount = parseFloat(amountForDonate)
 
-  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount < 0
+  if (isNaN(actualAmount) || havingMainBalance < actualAmount || actualAmount <= 0
     || amountForDonate.trim() !== actualAmount.toString().trim()) {
-    alert('Please give me valid number')
+    alert('Please give me the valid amount you want to donate')
     return;
   }
   const collectedAmount = totalCollection + actualAmount;
