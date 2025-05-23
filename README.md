@@ -97,7 +97,7 @@ You can view the live version of the project here:
 1. Clone this repository to your local machine:
 
 ```
-  git clone https://github.com/Humayun1318/B10A5-reset9.git
+  git clone https://github.com/Humayun1318/donation-platform.git
 
 ```
 
@@ -114,3 +114,11 @@ You can view the live version of the project here:
 - Add user authentication and profiles for personalized donation histories.
 
 ---
+
+## 📬 Contact
+
+**Project Maintainer:** Humayun Kabir          
+📧 Email: humayunkabir6267@gmail.com  
+🐙 GitHub: [@Humayun1318](https://github.com/Humayun1318)
+
+Thank you for exploring Donation platform — contributions, feedback, and ideas are always welcome! 🚀
