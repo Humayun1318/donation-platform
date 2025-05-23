@@ -88,7 +88,7 @@ These questions and their answers provide an understanding of the core concepts 
 
 ## Live Demo
 You can view the live version of the project here:  
-[Live Demo Link](https://humayun1318.github.io/B10A5-reset9/)
+[Live Demo Link](https://humayun1318.github.io/donation-platform/)
 
 ---
 
